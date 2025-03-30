@@ -1,11 +1,12 @@
+import { TechStack } from "@/types/techStack";
+
 export interface Project {
-  id: string;
+  id: number;
   title: string;
   description: string;
   thumbnail: string;
-  techStackNames: string[];
-  techStackIcons: string[];
+  techStack: TechStack[];
   demoUrl: string;
-  backendRepo: string;
+  backendRepo?: string;
   frontendRepo: string;
 }

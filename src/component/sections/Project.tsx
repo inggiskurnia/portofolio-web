@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { projects } from "@/data/projects";
-import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import ProjectCard from "@/component/cards/ProjectCard";
 
 const Project: FC = () => {
   return (
@@ -9,42 +9,17 @@ const Project: FC = () => {
         <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">My Projects</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
-            <div
+            <ProjectCard
               key={project.id}
-              className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 transition-transform hover:shadow-md hover:-translate-y-1"
-            >
-              <div className="h-48 bg-gray-100"></div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2 text-gray-800">{project.title}</h3>
-                <p className="text-gray-700 mb-4">{project.description}</p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.technologies.map((tech, index) => (
-                    <span
-                      key={index}
-                      className="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-                <div className="flex gap-4">
-                  <a
-                    href={project.demoUrl}
-                    className="flex items-center text-gray-700 hover:text-gray-900"
-                  >
-                    <FaExternalLinkAlt size={16} className="mr-1" />
-                    Demo
-                  </a>
-                  <a
-                    href={project.repoBEUrl}
-                    className="flex items-center text-gray-700 hover:text-gray-900"
-                  >
-                    <FaGithub size={16} className="mr-1" />
-                    Backend
-                  </a>
-                </div>
-              </div>
-            </div>
+              id={project.id}
+              title={project.title}
+              description={project.description}
+              thumbnail={project.thumbnail}
+              techStack={project.techStack}
+              demoUrl={project.demoUrl}
+              frontendRepo={project.frontendRepo}
+              backendRepo={project.backendRepo}
+            />
           ))}
         </div>
       </div>

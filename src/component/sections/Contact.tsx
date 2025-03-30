@@ -1,5 +1,7 @@
 import { FC } from "react";
-import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
+import MailIcon from "@/component/ui/MailIcon";
+import GitHubIcon from "@/component/ui/GitHubIcon";
+import LinkedInIcon from "@/component/ui/LinkedInIcon";
 
 const Contact: FC = () => {
   return (
@@ -58,28 +60,13 @@ const Contact: FC = () => {
                 I&#39;m always open to discussing new projects, creative ideas or opportunities to
                 be part of your vision.
               </p>
-              <div className="flex items-center space-x-4">
-                <FaEnvelope size={24} className="text-gray-700" />
-                <a
-                  href="mailto:inggiskurnia32@gmail.com"
-                  className="text-gray-700 hover:text-gray-900"
-                >
-                  inggiskurnia32@gmail.com
-                </a>
-              </div>
+              <span className={"flex gap-4"}>
+                <MailIcon />
+                inggiskurnia32@gmail.com
+              </span>
               <div className="flex space-x-6 mt-6">
-                <a
-                  href="https://github.com/inggiskurnia"
-                  className="text-gray-600 hover:text-gray-900"
-                >
-                  <FaGithub size={28} />
-                </a>
-                <a
-                  href="https://linkedin.com/in/inggis-trisiawan"
-                  className="text-gray-600 hover:text-gray-900"
-                >
-                  <FaLinkedin size={28} />
-                </a>
+                <GitHubIcon />
+                <LinkedInIcon />
               </div>
             </div>
           </div>

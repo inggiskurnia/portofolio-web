@@ -1,39 +1,29 @@
 import { FC } from "react";
-import Image from "next/image";
-import { Download } from "lucide-react";
 
 const Hero: FC = () => {
   return (
-    <section className="min-h-[calc(100svh-100px)] flex justify-center items-center p-4">
-      <div className="text-center max-w-xl space-y-8 text-gray-800">
-        <div className={"flex justify-center items-center"}>
-          <Image
-            src={"/images/pas-foto.jpg"}
-            alt={"pas foto"}
-            width={150}
-            height={150}
-            className={"rounded-full"}
-          />
-        </div>
-
-        <h1 className="text-2xl font-semibold">👋 Hi, I&#39;m Inggis</h1>
-        <h2 className="text-4xl font-semibold">Software Engineer based in Jakarta, Indonesia</h2>
-        <p className="text-lg text-gray-500">
-          I specialize in building reliable and efficient software, focusing on writing clean code,
-          improving performance, and following best practices in software development.
-        </p>
-        <div className={"flex gap-16 justify-center h-12"}>
-          <button
-            className={
-              "bg-black rounded-2xl text-white p-4 w-40 cursor-pointer items-center flex justify-center"
-            }
-          >
-            Hire me
-          </button>
-          <button className={"flex gap-4 justify-center items-center cursor-pointer"}>
-            Download CV
-            <Download />
-          </button>
+    <section className="bg-white text-gray-800">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 border-b">
+        <div className="max-w-3xl">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">Hi👋, I&#39;m Inggis Trisiawan</h1>
+          <h2 className="text-2xl md:text-3xl font-medium mb-6 text-gray-600">Software Engineer</h2>
+          <p className="text-lg mb-8 text-gray-700">
+            I build exceptional and scalable web applications with modern technologies.
+          </p>
+          <div className="flex flex-wrap gap-4">
+            <a
+              href="#contact"
+              className="px-6 py-3 bg-gray-800 text-white font-medium rounded-md hover:bg-gray-700 transition-colors"
+            >
+              Contact Me
+            </a>
+            <a
+              href="#projects"
+              className="px-6 py-3 bg-transparent border border-gray-800 text-gray-800 font-medium rounded-md hover:bg-gray-50 transition-colors"
+            >
+              View My Work
+            </a>
+          </div>
         </div>
       </div>
     </section>

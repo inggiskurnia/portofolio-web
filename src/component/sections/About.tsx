@@ -18,21 +18,16 @@ const About: FC = () => {
           </div>
           <div className="md:w-2/3 text-gray-700">
             <p className="text-lg mb-6">
-              I'm a passionate Software Engineer with over 5 years of experience in building web
-              applications and services. My journey in software development began with a curiosity
-              for creating interactive websites, which evolved into a career focused on building
-              scalable and performant applications.
+              Software Engineer in transition with over five years of engineering experience in
+              control systems. A self-driven individual with a high degree of curiosity and a
+              passion for solving both technical and non-technical challenges using a &#34;can-do
+              approach.&#34;
             </p>
             <p className="text-lg mb-6">
-              I specialize in full-stack development using modern JavaScript frameworks like React
-              and Next.js for the frontend, and Node.js/Express for the backend. I'm also
-              experienced with database design and management, as well as deploying applications to
-              cloud platforms.
-            </p>
-            <p className="text-lg">
-              When I'm not coding, you can find me exploring new technologies, contributing to
-              open-source projects, or sharing my knowledge through technical blog posts and
-              mentoring junior developers.
+              Proven in managing complex projects, developing comprehensive technical documentation,
+              and resolving intricate problems. Currently honing software expertise through an
+              intensive fullstack development bootcamp, and eager to leverage a strong background in
+              automation and system design to build scalable, innovative software solutions.
             </p>
           </div>
         </div>

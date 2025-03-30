@@ -8,8 +8,7 @@ const ProjectCard: FC<Project> = ({
   thumbnail,
   title,
   description,
-  techStackNames,
-  techStackIcons,
+  techStack,
   demoUrl,
   frontendRepo,
   backendRepo,
@@ -33,15 +32,13 @@ const ProjectCard: FC<Project> = ({
         <p className="text-gray-700 mb-4">{description}</p>
 
         <div className="flex flex-wrap gap-2 mb-4">
-          {techStackNames.map((tech, index) => (
+          {techStack.map(({ name, icon: Icon }, index) => (
             <span
               key={index}
               className="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm flex items-center"
             >
-              {techStackIcons && techStackIcons[index] && (
-                <span className="mr-1">{techStackIcons[index]}</span>
-              )}
-              {tech}
+              {Icon && <Icon size={16} className="mr-1" />}
+              {name}
             </span>
           ))}
         </div>
