@@ -20,7 +20,7 @@ const ProjectCard: FC<Project> = ({
     >
       <div className="h-48 bg-gray-100 relative">
         {thumbnail ? (
-          <Image src={thumbnail} alt={`${title} thumbnail`} fill className="object-cover" />
+          <Image src={thumbnail} alt={`${title} thumbnail`} fill className="object-left-top" />
         ) : (
           <div className="h-full w-full flex items-center justify-center text-gray-400">
             No Image Available

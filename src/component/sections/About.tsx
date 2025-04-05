@@ -16,18 +16,23 @@ const About: FC = () => {
               className={"rounded-full"}
             />
           </div>
-          <div className="md:w-2/3 text-gray-700">
-            <p className="text-lg mb-6">
+          <div className="md:w-2/3 text-gray-700 space-y-6 text-lg">
+            <p>
               Software Engineer in transition with over five years of engineering experience in
-              control systems. A self-driven individual with a high degree of curiosity and a
-              passion for solving both technical and non-technical challenges using a &#34;can-do
-              approach.&#34;
+              control systems.
             </p>
-            <p className="text-lg mb-6">
+            <p>
+              A self-driven individual with a high degree of curiosity and a passion for solving
+              both technical and non-technical challenges using a &#34;can-do approach.&#34;
+            </p>
+            <p>
               Proven in managing complex projects, developing comprehensive technical documentation,
-              and resolving intricate problems. Currently honing software expertise through an
-              intensive fullstack development bootcamp, and eager to leverage a strong background in
-              automation and system design to build scalable, innovative software solutions.
+              and resolving intricate problems.
+            </p>
+            <p>
+              Currently honing software expertise through an intensive fullstack development
+              bootcamp, and eager to leverage a strong background in automation and system design to
+              build scalable, innovative software solutions.
             </p>
           </div>
         </div>
