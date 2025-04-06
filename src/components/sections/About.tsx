@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const About: FC = () => {
   return (
-    <section id="about" className="py-16 md:py-24 bg-white">
+    <section id="about" className="py-16 md:py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">About Me</h2>
         <div className="md:flex md:items-center md:space-x-12">

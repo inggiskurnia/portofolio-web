@@ -6,6 +6,7 @@ import Skills from "@/components/sections/Skills";
 import About from "@/components/sections/About";
 import Navbar from "@/components/sections/Navbar";
 import Hero from "@/components/sections/Hero";
+import ProjectMarquee from "@/components/sections/ProjectMarquee";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
         <Hero />
         <About />
         <Skills />
+        <ProjectMarquee />
         <Project />
         <Contact />
       </main>
