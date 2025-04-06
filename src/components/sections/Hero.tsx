@@ -4,11 +4,11 @@ const Hero: FC = () => {
   return (
     <section className="relative bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden">
       {/* Marquee Background */}
-      <div className="absolute top-12 inset-0 z-0 overflow-hidden">
+      <div className="absolute top-16 inset-0 z-0 overflow-hidden">
         {Array.from({ length: 6 }).map((_, index) => (
           <div
             key={index}
-            className={`absolute w-full whitespace-nowrap text-8xl font-bold text-black animate-marquee`}
+            className={`absolute w-full whitespace-nowrap text-8xl font-bold text-gray-800 animate-marquee`}
             style={{
               top: `${index * 10}vh`, // Adjust spacing between rows
               background:
@@ -17,7 +17,8 @@ const Hero: FC = () => {
               WebkitTextFillColor: "transparent",
             }}
           >
-            Software Engineer Software Engineer
+            Software Engineer Software Engineer Software Engineer Software Engineer Software
+            Engineer
           </div>
         ))}
       </div>
