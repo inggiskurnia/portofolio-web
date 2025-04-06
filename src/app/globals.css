@@ -7,6 +7,10 @@
   font-style: normal;
 }
 
+@theme {
+  --color-background: var(--background);
+}
+
 @font-face {
   font-family: "Averta Demo PE";
   src: url("/public/fonts/AvertaDemoPE-ExtraboldItalic.woff2") format("woff2");
@@ -16,19 +20,7 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #000000; /* Set text color to black */
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #ededed; /* Dark background */
-    --foreground: #000000; /* Keep text black */
-  }
+  --foreground: #000000 ;
 }
 
 body {

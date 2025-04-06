@@ -1,7 +1,7 @@
 import { FC } from "react";
-import GitHubIcon from "@/component/ui/GitHubIcon";
-import LinkedInIcon from "@/component/ui/LinkedInIcon";
-import MailIcon from "@/component/ui/MailIcon";
+import GitHubIcon from "@/components/icons/GitHubIcon";
+import LinkedInIcon from "@/components/icons/LinkedInIcon";
+import MailIcon from "@/components/icons/MailIcon";
 
 const Footer: FC = () => {
   return (

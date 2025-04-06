@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { skills } from "@/data/skills";
-import SkillCard from "@/component/cards/SkillCard";
+import SkillCard from "@/components/cards/SkillCard";
 
 const Skills: FC = () => {
   return (
