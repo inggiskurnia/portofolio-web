@@ -183,8 +183,8 @@ const Contact: FC = () => {
           <div className="flex flex-col justify-center ">
             <div className="space-y-6">
               <p className="text-lg text-gray-700 mb-8">
-                I&#39;m always open to discussing new projects, creative ideas or opportunities to
-                be part of your vision.
+                I always open to discuss new projects, creative ideas or opportunities to be part of
+                your vision.
               </p>
               <span className={"flex gap-4"}>
                 <MailIcon />
