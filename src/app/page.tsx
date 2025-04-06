@@ -17,7 +17,7 @@ export default function Home() {
       </Head>
       <Navbar />
 
-      <main>
+      <main className="p-3">
         <Hero />
         <About />
         <Skills />
