@@ -7,26 +7,26 @@ const Navbar: FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-sm">
+    <nav className="fixed w-full z-50 backdrop-blur-sm bg-white/70 shadow">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <span className="font-bold text-xl text-gray-800">IT</span>
+            <span className="font-bold text-2xl bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
+              IT
+            </span>
           </div>
 
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#about" className="text-gray-600 hover:text-gray-900">
-              About
-            </a>
-            <a href="#skills" className="text-gray-600 hover:text-gray-900">
-              Skills
-            </a>
-            <a href="#projects" className="text-gray-600 hover:text-gray-900">
-              Projects
-            </a>
-            <a href="#contact" className="text-gray-600 hover:text-gray-900">
-              Contact
-            </a>
+            {["about", "skills", "projects", "contact"].map((item) => (
+              <a
+                key={item}
+                href={`#${item}`}
+                className="text-gray-600 hover:text-gray-900 capitalize relative group"
+              >
+                {item}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gray-800 transition-all group-hover:w-full" />
+              </a>
+            ))}
           </div>
 
           {/* Mobile menu button */}

@@ -16,11 +16,16 @@ const ProjectCard: FC<Project> = ({
   return (
     <div
       key={id}
-      className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 transition-transform hover:shadow-md hover:-translate-y-1"
+      className="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
     >
-      <div className="h-48 bg-gray-100 relative">
+      <div className="h-48 bg-gray-100 relative overflow-hidden">
         {thumbnail ? (
-          <Image src={thumbnail} alt={`${title} thumbnail`} fill className="object-left-top" />
+          <Image
+            src={thumbnail}
+            alt={`${title} thumbnail`}
+            fill
+            className="object-cover group-hover:scale-110 transition-transform duration-300"
+          />
         ) : (
           <div className="h-full w-full flex items-center justify-center text-gray-400">
             No Image Available
@@ -28,14 +33,16 @@ const ProjectCard: FC<Project> = ({
         )}
       </div>
       <div className="p-6">
-        <h3 className="text-xl font-semibold mb-2 text-gray-800">{title}</h3>
-        <p className="text-gray-700 mb-4">{description}</p>
+        <h3 className="text-xl font-semibold mb-2 text-gray-800 group-hover:text-gray-600 transition-colors">
+          {title}
+        </h3>
+        <p className="text-gray-700 mb-4 line-clamp-2">{description}</p>
 
         <div className="flex flex-wrap gap-2 mb-4">
           {techStack.map(({ name, icon: Icon }, index) => (
             <span
               key={index}
-              className="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm flex items-center"
+              className="px-3 py-1 bg-gray-50 text-gray-600 rounded-full text-sm flex items-center hover:bg-gray-100 transition-colors"
             >
               {Icon && <Icon size={16} className="mr-1" />}
               {name}
@@ -43,7 +50,7 @@ const ProjectCard: FC<Project> = ({
           ))}
         </div>
 
-        <div className="flex flex-wrap gap-4">
+        <div className="flex flex-wrap gap-4 pt-4 border-t">
           {demoUrl && (
             <a
               href={demoUrl}
