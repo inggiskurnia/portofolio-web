@@ -31,8 +31,8 @@ const About: FC = () => {
             </p>
             <p>
               Currently honing software expertise through an intensive fullstack development
-              bootcamp, and eager to leverage a strong background in automation and system design to
-              build scalable, innovative software solutions.
+              bootcamp in Purwadhika, and eager to leverage a strong background in automation and
+              system design to build scalable, innovative software solutions.
             </p>
           </div>
         </div>

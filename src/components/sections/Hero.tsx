@@ -2,8 +2,28 @@ import { FC } from "react";
 
 const Hero: FC = () => {
   return (
-    <section className="relative bg-gradient-to-br from-gray-50 to-gray-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-48">
+    <section className="relative bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden">
+      {/* Marquee Background */}
+      <div className="absolute top-12 inset-0 z-0 overflow-hidden">
+        {Array.from({ length: 6 }).map((_, index) => (
+          <div
+            key={index}
+            className={`absolute w-full whitespace-nowrap text-8xl font-bold text-black animate-marquee`}
+            style={{
+              top: `${index * 10}vh`, // Adjust spacing between rows
+              background:
+                "linear-gradient(to right, rgba(255,255,255,0), rgba(0,0,0,0.1), rgba(255,255,255,0))",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+            }}
+          >
+            Software Engineer Software Engineer
+          </div>
+        ))}
+      </div>
+
+      {/* Main Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-48">
         <div className="max-w-3xl">
           <div className="mb-6">
             <span className="text-5xl md:text-6xl font-bold">Hi👋, I&#39;m Inggis Trisiawan</span>

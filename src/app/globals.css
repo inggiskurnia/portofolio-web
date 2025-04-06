@@ -19,6 +19,21 @@
   --foreground: #000000;
 }
 
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 15s linear infinite;
+  position: absolute;
+  white-space: nowrap;
+}
+
 @theme {
   --color-background: var(--background);
   --color-primary-50: #f0f9ff;
