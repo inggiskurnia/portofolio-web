@@ -1,7 +1,7 @@
 "use client";
 
 import { FC } from "react";
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import { Formik, Form, Field, ErrorMessage, FormikHelpers } from "formik";
 import * as Yup from "yup";
 import MailIcon from "@/components/icons/MailIcon";
 import GitHubIcon from "@/components/icons/GitHubIcon";
@@ -21,6 +21,14 @@ const ContactSchema = Yup.object().shape({
     .required("Message is required"),
 });
 
+type ContactFormValues = {
+  name: string;
+  email: string;
+  title: string;
+  message: string;
+  time: string;
+};
+
 const Contact: FC = () => {
   const initialValues = {
     name: "",
@@ -30,7 +38,10 @@ const Contact: FC = () => {
     time: new Date().toString(),
   };
 
-  const handleSubmit = async (values: typeof initialValues, { setSubmitting, resetForm }: any) => {
+  const handleSubmit = async (
+    values: typeof initialValues,
+    { setSubmitting, resetForm }: FormikHelpers<ContactFormValues>
+  ) => {
     const emailJsServiceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
     const emailJsTemplateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
     const emailJsUserId = process.env.NEXT_PUBLIC_EMAILJS_USER_ID;

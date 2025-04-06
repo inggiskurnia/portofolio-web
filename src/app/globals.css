@@ -7,6 +7,18 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Averta Demo PE";
+  src: url("/public/fonts/AvertaDemoPE-ExtraboldItalic.woff2") format("woff2");
+  font-weight: bold;
+  font-style: italic;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #000000;
+}
+
 @theme {
   --color-background: var(--background);
   --color-primary-50: #f0f9ff;
@@ -30,18 +42,6 @@
   --color-secondary-700: #0f766e;
   --color-secondary-800: #115e59;
   --color-secondary-900: #134e4a;
-}
-
-@font-face {
-  font-family: "Averta Demo PE";
-  src: url("/public/fonts/AvertaDemoPE-ExtraboldItalic.woff2") format("woff2");
-  font-weight: bold;
-  font-style: italic;
-}
-
-:root {
-  --background: #ffffff;
-  --foreground: #000000;
 }
 
 body {

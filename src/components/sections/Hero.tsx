@@ -3,16 +3,11 @@ import { FC } from "react";
 const Hero: FC = () => {
   return (
     <section className="relative bg-gradient-to-br from-gray-50 to-gray-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-40">
-        <div className="max-w-3xl relative z-10">
-          <div className="mb-8">
-            <span className="px-4 py-2 bg-gray-800 text-white text-sm rounded-full">
-              Welcome to my portfolio
-            </span>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-48">
+        <div className="max-w-3xl">
+          <div className="mb-6">
+            <span className="text-5xl md:text-6xl font-bold">Hi👋, I&#39;m Inggis Trisiawan</span>
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-gray-800 via-gray-600 to-gray-800 bg-clip-text text-transparent">
-            Hi👋, I&#39;m Inggis Trisiawan
-          </h1>
           <h2 className="text-2xl md:text-3xl font-medium mb-6 text-gray-600">Software Engineer</h2>
           <p className="text-lg mb-8 text-gray-700 leading-relaxed">
             I build exceptional and scalable web applications with modern technologies.
