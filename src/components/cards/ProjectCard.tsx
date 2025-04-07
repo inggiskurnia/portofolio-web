@@ -2,6 +2,7 @@ import { Project } from "@/types/project";
 import { FC } from "react";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import Image from "next/image";
+import Link from "next/link";
 
 const ProjectCard: FC<Project> = ({
   id,
@@ -18,24 +19,30 @@ const ProjectCard: FC<Project> = ({
       key={id}
       className="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
     >
-      <div className="h-48 bg-gray-100 relative overflow-hidden">
-        {thumbnail ? (
-          <Image
-            src={thumbnail}
-            alt={`${title} thumbnail`}
-            fill
-            className="object-cover group-hover:scale-110 transition-transform duration-300"
-          />
-        ) : (
-          <div className="h-full w-full flex items-center justify-center text-gray-400">
-            No Image Available
-          </div>
-        )}
-      </div>
+      <Link href={`/project/${id}`}>
+        <div className="h-48 bg-gray-100 relative overflow-hidden">
+          {thumbnail ? (
+            <Image
+              src={thumbnail}
+              alt={`${title} thumbnail`}
+              fill
+              className="object-cover group-hover:scale-110 transition-transform duration-300"
+            />
+          ) : (
+            <div className="h-full w-full flex items-center justify-center text-gray-400">
+              No Image Available
+            </div>
+          )}
+        </div>
+      </Link>
+
       <div className="p-6">
-        <h3 className="text-xl font-semibold mb-2 text-gray-800 group-hover:text-gray-600 transition-colors">
-          {title}
-        </h3>
+        <Link href={`/project/${id}`}>
+          <h3 className="text-xl font-semibold mb-2 text-gray-800 group-hover:text-gray-600 transition-colors">
+            {title}
+          </h3>
+        </Link>
+
         <p className="text-gray-700 mb-4 line-clamp-2">{description}</p>
 
         <div className="flex flex-wrap gap-2 mb-4">

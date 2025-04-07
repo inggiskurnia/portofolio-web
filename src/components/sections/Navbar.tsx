@@ -2,6 +2,7 @@
 
 import { FC, useState } from "react";
 import { Menu, X } from "lucide-react";
+import Link from "next/link";
 
 const Navbar: FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -10,17 +11,19 @@ const Navbar: FC = () => {
     <nav className="fixed w-full z-50 backdrop-blur-sm bg-white/70 shadow">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
-          <div className="flex items-center">
-            <span className="font-bold text-2xl bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
-              IT
-            </span>
-          </div>
+          <Link href="/" className="flex items-center">
+            <div className="flex items-center">
+              <span className="font-bold text-2xl bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
+                IT
+              </span>
+            </div>
+          </Link>
 
           <div className="hidden md:flex items-center space-x-8">
             {["about", "skills", "projects", "contact"].map((item) => (
               <a
                 key={item}
-                href={`#${item}`}
+                href={`/#${item}`}
                 className="text-gray-600 hover:text-gray-900 capitalize relative group"
               >
                 {item}
@@ -46,28 +49,28 @@ const Navbar: FC = () => {
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <a
-              href="#about"
+              href="/#about"
               className="block px-3 py-2 text-gray-600 hover:bg-gray-50"
               onClick={() => setMobileMenuOpen(false)}
             >
               About
             </a>
             <a
-              href="#skills"
+              href="/#skills"
               className="block px-3 py-2 text-gray-600 hover:bg-gray-50"
               onClick={() => setMobileMenuOpen(false)}
             >
               Skills
             </a>
             <a
-              href="#projects"
+              href="/#projects"
               className="block px-3 py-2 text-gray-600 hover:bg-gray-50"
               onClick={() => setMobileMenuOpen(false)}
             >
               Projects
             </a>
             <a
-              href="#contact"
+              href="/#contact"
               className="block px-3 py-2 text-gray-600 hover:bg-gray-50"
               onClick={() => setMobileMenuOpen(false)}
             >
