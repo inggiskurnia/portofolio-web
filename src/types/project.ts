@@ -9,6 +9,7 @@ export interface Project {
   demoUrl: string;
   backendRepo?: string;
   frontendRepo: string;
-  screenshots?: string[]; // Add this new field
-  detailedDescription?: string; // Optional longer description
+  screenshots?: string[];
+  detailedDescription?: string;
+  features?: string[];
 }

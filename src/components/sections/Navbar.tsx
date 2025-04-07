@@ -21,14 +21,14 @@ const Navbar: FC = () => {
 
           <div className="hidden md:flex items-center space-x-8">
             {["about", "skills", "projects", "contact"].map((item) => (
-              <a
+              <Link
                 key={item}
                 href={`/#${item}`}
                 className="text-gray-600 hover:text-gray-900 capitalize relative group"
               >
                 {item}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gray-800 transition-all group-hover:w-full" />
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -48,34 +48,34 @@ const Navbar: FC = () => {
       {mobileMenuOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a
+            <Link
               href="/#about"
               className="block px-3 py-2 text-gray-600 hover:bg-gray-50"
               onClick={() => setMobileMenuOpen(false)}
             >
               About
-            </a>
-            <a
+            </Link>
+            <Link
               href="/#skills"
               className="block px-3 py-2 text-gray-600 hover:bg-gray-50"
               onClick={() => setMobileMenuOpen(false)}
             >
               Skills
-            </a>
-            <a
+            </Link>
+            <Link
               href="/#projects"
               className="block px-3 py-2 text-gray-600 hover:bg-gray-50"
               onClick={() => setMobileMenuOpen(false)}
             >
               Projects
-            </a>
-            <a
+            </Link>
+            <Link
               href="/#contact"
               className="block px-3 py-2 text-gray-600 hover:bg-gray-50"
               onClick={() => setMobileMenuOpen(false)}
             >
               Contact
-            </a>
+            </Link>
           </div>
         </div>
       )}
