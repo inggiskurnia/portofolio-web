@@ -38,7 +38,7 @@ const ProjectCard: FC<Project> = ({
       </Link>
 
       <div className="p-6">
-        <Link href={`/project/${id}`}>
+        <Link href={`/project/${slug}`}>
           <h3 className="text-xl font-semibold mb-2 text-gray-800 group-hover:text-gray-600 transition-colors">
             {title}
           </h3>
