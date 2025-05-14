@@ -16,8 +16,8 @@ import { FaGithub } from "react-icons/fa6";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
 const ProjectPage: FC = () => {
-  const { id } = useParams();
-  const project = projects.find((p) => p.id === Number(id));
+  const { slug } = useParams();
+  const project = projects.find((p) => p.slug === slug);
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);
@@ -46,7 +46,6 @@ const ProjectPage: FC = () => {
           {project.title}
         </h1>
 
-        {/* Tech Stack */}
         <div className="mb-6 md:mb-8">
           <h2 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4">Technologies Used</h2>
           <div className="flex flex-wrap gap-2">
@@ -62,7 +61,6 @@ const ProjectPage: FC = () => {
           </div>
         </div>
 
-        {/* Project Links */}
         <div className="mb-6 md:mb-8">
           <h2 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4">Project Links</h2>
           <div className="flex flex-wrap gap-3 md:gap-4">

@@ -6,6 +6,7 @@ export const projects: Project[] = [
   {
     id: 1,
     title: "Ticketing E-commerce",
+    slug: "ticketing-e-commerce",
     description:
       "An online ticket booking system where users can browse events, purchase tickets. Includes user authentication, and authorization",
     thumbnail: "/images/eventure.jpg",
@@ -43,6 +44,7 @@ export const projects: Project[] = [
   {
     id: 2,
     title: "Multi-Storage E-commerce",
+    slug: "multi-storage-e-commerce",
     description:
       "A multi warehouses e-commerce system where each order automatically routes to the nearest location and calculates shipping costs based on distance. Integrate with payment gateway Midtrans",
     thumbnail: "/images/warehub.jpg",
@@ -93,6 +95,7 @@ export const projects: Project[] = [
   {
     id: 3,
     title: "Company Landing Page",
+    slug: "company-landing-page",
     description:
       "A professional landing page for an investment firm, showcasing its portfolio, investment strategy, and market insights. Features real-time data visualization, dynamic content management, and an intuitive UI.",
     thumbnail: "/images/syncona.png",

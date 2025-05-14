@@ -8,6 +8,7 @@ const ProjectCard: FC<Project> = ({
   id,
   thumbnail,
   title,
+  slug,
   description,
   techStack,
   demoUrl,
@@ -19,7 +20,7 @@ const ProjectCard: FC<Project> = ({
       key={id}
       className="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
     >
-      <Link href={`/project/${id}`}>
+      <Link href={`/project/${slug}`}>
         <div className="h-48 bg-gray-100 relative overflow-hidden">
           {thumbnail ? (
             <Image

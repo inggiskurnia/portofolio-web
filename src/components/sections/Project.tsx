@@ -12,6 +12,7 @@ const Project: FC = () => {
             <ProjectCard
               key={project.id}
               id={project.id}
+              slug={project.slug}
               title={project.title}
               description={project.description}
               thumbnail={project.thumbnail}
