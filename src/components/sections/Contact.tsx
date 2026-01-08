@@ -93,9 +93,9 @@ const Contact: FC = () => {
             className="text-center mb-16"
         >
             <span className="text-primary font-semibold tracking-wider uppercase text-sm">Contact</span>
-            <h2 className="text-3xl md:text-5xl font-bold font-heading mt-2 mb-6">Let's Work Together</h2>
+            <h2 className="text-3xl md:text-5xl font-bold font-heading mt-2 mb-6">Let&apos;s Work Together</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-                Have a project in mind or just want to say hi? I'd love to hear from you.
+                Have a project in mind or just want to say hi? I&apos;d love to hear from you.
             </p>
         </motion.div>
 
@@ -133,7 +133,7 @@ const Contact: FC = () => {
                 <h3 className="text-xl font-bold mb-4">Open for Opportunities</h3>
                 <p className="opacity-90 leading-relaxed">
                     I am currently available for freelance projects and full-time opportunities. 
-                    If you need a dedicated developer to bring your ideas to life, let's talk!
+                    If you need a dedicated developer to bring your ideas to life, let&apos;s talk!
                 </p>
             </div>
           </motion.div>

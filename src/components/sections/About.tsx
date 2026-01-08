@@ -59,7 +59,7 @@ const About: FC = () => {
           >
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                  <p>
-                  Hello! I'm Inggis, a Software Engineer in transition with over five years of engineering experience in control systems. 
+                  Hello! I&apos;m Inggis, a Software Engineer in transition with over five years of engineering experience in control systems. 
                   I decided to pivot into software engineering because I have a deep curiosity for how things work on the web.
                  </p>
                  <p>

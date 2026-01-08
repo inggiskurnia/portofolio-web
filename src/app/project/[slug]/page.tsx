@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/carousel";
 import { projects } from "@/data/projects";
 import Image from "next/image";
+import Link from "next/link";
 import { useParams } from "next/navigation";
 import { FC, useEffect, useState } from "react";
 import { FaExternalLinkAlt } from "react-icons/fa";
@@ -40,7 +41,7 @@ const ProjectPage: FC = () => {
       <div className="min-h-screen pt-32 flex items-center justify-center bg-background">
         <div className="text-center">
           <h1 className="text-2xl font-heading font-bold text-foreground">Project not found</h1>
-          <a href="/#projects" className="text-primary hover:underline mt-4 block">Return to Portfolio</a>
+          <Link href="/#projects" className="text-primary hover:underline mt-4 block">Return to Portfolio</Link>
         </div>
       </div>
     );
@@ -52,9 +53,9 @@ const ProjectPage: FC = () => {
         
         {/* Header */}
         <div className="mb-12 border-b border-border pb-8">
-            <a href="/#projects" className="inline-flex items-center text-sm font-medium text-muted-foreground hover:text-primary mb-6 transition-colors">
+            <Link href="/#projects" className="inline-flex items-center text-sm font-medium text-muted-foreground hover:text-primary mb-6 transition-colors">
                 <span className="mr-2">←</span> Back to Projects
-            </a>
+            </Link>
             <h1 className="text-4xl md:text-5xl font-bold font-heading mb-6 text-foreground">
             {project.title}
             </h1>
