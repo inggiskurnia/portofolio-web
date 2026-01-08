@@ -23,7 +23,7 @@ const Project: FC = () => {
                  <h2 className="text-3xl md:text-5xl font-bold font-heading mt-2">Selected Works</h2>
             </div>
             <p className="text-muted-foreground max-w-sm text-lg md:text-right">
-                Here are some projects I've worked on. Each one was a unique challenge.
+                Here are some projects I&apos;ve worked on. Each one was a unique challenge.
             </p>
         </motion.div>
 

@@ -42,7 +42,7 @@ const Hero: FC = () => {
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-lg leading-relaxed">
-              I'm Inggis Trisiawan, a Software Engineer passionate about crafting
+              I&apos;m Inggis Trisiawan, a Software Engineer passionate about crafting
               scalable applications and intuitive user interfaces with modern
               technologies.
             </p>
@@ -129,9 +129,9 @@ const Hero: FC = () => {
                           <div className="w-3 h-3 rounded-full bg-green-500"/>
                       </div>
                       <div className="text-secondary-foreground">const <span className="text-primary">Developer</span> = {'{'}</div>
-                      <div className="pl-4">name: <span className="text-green-400">'Inggis Trisiawan'</span>,</div>
-                      <div className="pl-4">role: <span className="text-green-400">'Software Engineer'</span>,</div>
-                      <div className="pl-4">skills: ['Next.js', 'React', 'TypeScript'],</div>
+                      <div className="pl-4">name: <span className="text-green-400">&apos;Inggis Trisiawan&apos;</span>,</div>
+                      <div className="pl-4">role: <span className="text-green-400">&apos;Software Engineer&apos;</span>,</div>
+                      <div className="pl-4">skills: [&apos;Next.js&apos;, &apos;React&apos;, &apos;TypeScript&apos;],</div>
                       <div className="pl-4">hardWorker: <span className="text-blue-400">true</span>,</div>
                       <div className="text-secondary-foreground">{'}'};</div>
                   </div>
