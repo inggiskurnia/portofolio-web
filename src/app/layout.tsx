@@ -1,13 +1,17 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import { Toaster } from "@/components/ui/toaster";
-import Head from "next/head";
-import Navbar from "@/components/sections/Navbar";
 import Footer from "@/components/sections/Footer";
+import Navbar from "@/components/sections/Navbar";
+import { Toaster } from "@/components/ui/toaster";
+import type { Metadata } from "next";
+import { Outfit } from "next/font/google";
+import "./globals.css";
+
+import MouseSpotlight from "@/components/ui/MouseSpotlight";
+
+const outfit = Outfit({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Inggis Trisiawan",
-  description: "Software Engineering",
+  description: "Software Engineering Portfolio",
 };
 
 export default function RootLayout({
@@ -16,15 +20,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <Head>
-        <title>Inggis Trisiawan | Software Engineer</title>
-        <meta name="description" content="Software Engineer Portfolio" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <body>
+    <html lang="en" className="scroll-smooth">
+      <body className={`${outfit.className} bg-background min-h-screen relative`}>
+        <div className="fixed inset-0 bg-grid z-[-1] pointer-events-none" />
+        <div className="ambient-glow" />
+        <MouseSpotlight />
         <Navbar />
-
         {children}
         <Toaster />
         <Footer />
