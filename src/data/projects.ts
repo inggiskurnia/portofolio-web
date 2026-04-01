@@ -82,7 +82,7 @@ export const projects: Project[] = [
       "Redeem points for ticket discounts (points expire in 3 months)",
       "Organizer dashboard with event lists, stats, graphs, and reports",
     ],
-    demoUrl: "https://dti-eventure.vercel.app/",
+    demoUrl: "https://eventure.iktrisiawan.com/",
     backendRepo: "https://github.com/inggiskurnia/dti-minpro-be",
     frontendRepo: "https://github.com/inggiskurnia/dti-minpro-fe",
     screenshots: [
@@ -104,7 +104,7 @@ export const projects: Project[] = [
       { name: "React", icon: SiReact },
       { name: "Tailwind CSS", icon: SiTailwindcss },
     ],
-    demoUrl: "https://syncona.vercel.app",
+    demoUrl: "https://syncona.iktrisiawan.com/",
     frontendRepo: "https://github.com/inggiskurnia/dti-syncona",
     screenshots: [
       "/images/syncona/hero.png",

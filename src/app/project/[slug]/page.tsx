@@ -38,7 +38,7 @@ const ProjectPage: FC = () => {
 
   if (!project) {
     return (
-      <div className="min-h-screen pt-32 flex items-center justify-center bg-background">
+      <div className="relative z-10 min-h-screen pt-32 flex items-center justify-center bg-background">
         <div className="text-center">
           <h1 className="text-2xl font-heading font-bold text-foreground">Project not found</h1>
           <Link href="/#projects" className="text-primary hover:underline mt-4 block">Return to Portfolio</Link>
@@ -48,7 +48,7 @@ const ProjectPage: FC = () => {
   }
 
   return (
-    <div className="pt-32 pb-20 bg-background min-h-screen">
+    <div className="relative z-10 pt-32 pb-20 bg-background min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}

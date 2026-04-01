@@ -59,7 +59,7 @@ const Hero: FC = () => {
               <motion.a
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                href="/resume.pdf"
+                href="/files/resume.pdf"
                 className="px-8 py-4 rounded-full bg-card border border-border text-foreground font-semibold flex items-center gap-2 hover:bg-accent hover:text-accent-foreground transition-all"
               >
                 Download CV

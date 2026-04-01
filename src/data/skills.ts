@@ -1,26 +1,28 @@
 import {
   SiReact,
   SiNextdotjs,
-  SiJavascript,
   SiTypescript,
-  SiHtml5,
-  SiCss3,
   SiTailwindcss,
   SiSpringboot,
   SiPostgresql,
   SiGit,
   SiDocker,
-  SiGooglecloud,
-  SiVercel,
-  SiSupabase,
   SiRedis,
   SiGraphql,
-  SiRedux,
   SiNeo4J,
+  SiNestjs,
+  SiNginx,
+  SiUbuntu,
+  SiVuedotjs,
+  SiRefine,
+  SiGrafana,
+  SiGithubactions,
+  SiApachekafka,
 } from "react-icons/si";
 import { BiLogoJava } from "react-icons/bi";
 import { TechStack } from "@/types/techStack";
 import { FaGear } from "react-icons/fa6";
+import { TbBrandAzure } from "react-icons/tb";
 
 interface Skill {
   category: string;
@@ -31,14 +33,12 @@ export const skills: Skill[] = [
   {
     category: "Frontend",
     skillList: [
+      { name: "TypeScript", icon: SiTypescript },
       { name: "React", icon: SiReact },
       { name: "Next.js", icon: SiNextdotjs },
-      { name: "JavaScript", icon: SiJavascript },
-      { name: "TypeScript", icon: SiTypescript },
-      { name: "HTML", icon: SiHtml5 },
-      { name: "CSS", icon: SiCss3 },
+      { name: "Vue.js", icon: SiVuedotjs },
+      { name: "Refine", icon: SiRefine },
       { name: "Tailwind CSS", icon: SiTailwindcss },
-      { name: "Zustand", icon: SiRedux },
     ],
   },
   {
@@ -46,6 +46,9 @@ export const skills: Skill[] = [
     skillList: [
       { name: "Java", icon: BiLogoJava },
       { name: "Spring Boot", icon: SiSpringboot },
+      { name: "Nest.js", icon: SiNestjs },
+      { name: "Kafka", icon: SiApachekafka },
+      { name: "Grafana", icon: SiGrafana },
       { name: "REST API", icon: FaGear },
       { name: "GraphQL", icon: SiGraphql },
     ],
@@ -63,9 +66,10 @@ export const skills: Skill[] = [
     skillList: [
       { name: "Git", icon: SiGit },
       { name: "Docker", icon: SiDocker },
-      { name: "Google Cloud Run", icon: SiGooglecloud },
-      { name: "Vercel", icon: SiVercel },
-      { name: "Supabase", icon: SiSupabase },
+      { name: "Azure", icon: TbBrandAzure },
+      { name: "Ubuntu", icon: SiUbuntu },
+      { name: "Nginx", icon: SiNginx },
+      { name: "Github Action", icon: SiGithubactions },
     ],
   },
 ];

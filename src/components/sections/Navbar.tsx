@@ -46,7 +46,7 @@ const Navbar: FC = () => {
                 <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
               <span className="ml-3 font-heading font-bold text-xl tracking-tight">
-                Inggis<span className="text-primary">.dev</span>
+                Inggis<span className="text-primary"> Trisiawan</span>
               </span>
             </Link>
 
@@ -104,7 +104,9 @@ const Navbar: FC = () => {
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     <span className="font-medium">{item.name}</span>
-                    <span className="text-xs text-muted-foreground opacity-0 group-hover:opacity-100">GO</span>
+                    <span className="text-xs text-muted-foreground opacity-0 group-hover:opacity-100">
+                      GO
+                    </span>
                   </Link>
                 ))}
                 <div className="h-px bg-border my-2" />
