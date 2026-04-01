@@ -1,6 +1,6 @@
 "use client";
 
-import { Github, Heart, Linkedin, Mail } from "lucide-react";
+import { Github, Heart, Linkedin, Mail, MessageCircle } from "lucide-react";
 import Link from "next/link";
 import { FC } from "react";
 
@@ -9,6 +9,7 @@ const Footer: FC = () => {
     { icon: Github, href: "https://github.com/inggiskurnia", label: "GitHub" },
     { icon: Linkedin, href: "https://linkedin.com/in/inggis-trisiawan", label: "LinkedIn" },
     { icon: Mail, href: "mailto:inggis.kurnia@gmail.com", label: "Email" },
+    { icon: MessageCircle, href: "https://wa.me/6289637551550", label: "WhatsApp" },
   ];
 
   return (

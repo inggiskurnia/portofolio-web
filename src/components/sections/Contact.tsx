@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import emailjs from "emailjs-com";
 import { ErrorMessage, Field, Form, Formik, FormikHelpers } from "formik";
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, Send } from "lucide-react";
+import { Github, Linkedin, Mail, MessageCircle, Send } from "lucide-react";
 import { FC } from "react";
 import * as Yup from "yup";
 
@@ -123,6 +123,17 @@ const Contact: FC = () => {
                     <Mail size={24} />
                   </div>
                   <span className="text-lg">inggiskurnia32@gmail.com</span>
+                </a>
+
+                <a
+                  href="https://wa.me/6289637551550"
+                  target="_blank"
+                  className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors group"
+                >
+                  <div className="p-3 bg-primary/10 text-primary rounded-lg group-hover:bg-primary group-hover:text-primary-foreground transition-all">
+                    <MessageCircle size={24} />
+                  </div>
+                  <span className="text-lg">+6289637551550</span>
                 </a>
 
                 <div className="flex gap-4 pt-4">

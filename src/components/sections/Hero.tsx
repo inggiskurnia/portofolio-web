@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Download, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowRight, Download, Github, Linkedin, Mail, MessageCircle } from "lucide-react";
 import { FC } from "react";
 
 const Hero: FC = () => {
@@ -89,6 +89,14 @@ const Hero: FC = () => {
                 className="hover:text-primary transition-colors"
               >
                 <Mail size={24} />
+              </a>
+              <a
+                href="https://wa.me/6289637551550"
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-primary transition-colors"
+              >
+                <MessageCircle size={24} />
               </a>
             </div>
           </motion.div>
