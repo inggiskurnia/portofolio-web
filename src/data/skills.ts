@@ -16,6 +16,7 @@ import {
   SiRedis,
   SiGraphql,
   SiRedux,
+  SiNeo4J,
 } from "react-icons/si";
 import { BiLogoJava } from "react-icons/bi";
 import { TechStack } from "@/types/techStack";
@@ -53,6 +54,7 @@ export const skills: Skill[] = [
     category: "Database",
     skillList: [
       { name: "PostgreSQL", icon: SiPostgresql },
+      { name: "Neo4j", icon: SiNeo4J },
       { name: "Redis", icon: SiRedis },
     ],
   },

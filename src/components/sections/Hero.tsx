@@ -42,9 +42,8 @@ const Hero: FC = () => {
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-lg leading-relaxed">
-              I&apos;m Inggis Trisiawan, a Software Engineer passionate about crafting
-              scalable applications and intuitive user interfaces with modern
-              technologies.
+              I&apos;m Inggis Trisiawan, a Software Engineer passionate about crafting scalable
+              applications and intuitive user interfaces with modern technologies.
             </p>
 
             <div className="flex flex-wrap gap-4 mb-12">
@@ -86,7 +85,7 @@ const Hero: FC = () => {
                 <Linkedin size={24} />
               </a>
               <a
-                href="mailto:inggis.kurnia@gmail.com"
+                href="mailto:inggiskurnia32@gmail.com"
                 className="hover:text-primary transition-colors"
               >
                 <Mail size={24} />
@@ -115,53 +114,63 @@ const Hero: FC = () => {
                 }}
                 className="absolute inset-0 bg-gradient-to-tr from-primary/30 to-blue-500/30 rounded-3xl blur-[60px]"
               />
-              
-              <div className="absolute inset-0 bg-card/50 backdrop-blur-3xl rounded-[2.5rem] border border-white/10 shadow-2xl p-8 flex flex-col justify-between overflow-hidden">
-                  <div className="absolute top-0 right-0 p-10 opacity-20">
-                      <div className="w-32 h-32 rounded-full bg-primary blur-3xl"/>
-                  </div>
-                  
-                  {/* Code snippet mock */}
-                  <div className="space-y-4 font-mono text-sm opacity-80">
-                      <div className="flex gap-2 mb-6">
-                          <div className="w-3 h-3 rounded-full bg-red-500"/>
-                          <div className="w-3 h-3 rounded-full bg-yellow-500"/>
-                          <div className="w-3 h-3 rounded-full bg-green-500"/>
-                      </div>
-                      <div className="text-secondary-foreground">const <span className="text-primary">Developer</span> = {'{'}</div>
-                      <div className="pl-4">name: <span className="text-green-400">&apos;Inggis Trisiawan&apos;</span>,</div>
-                      <div className="pl-4">role: <span className="text-green-400">&apos;Software Engineer&apos;</span>,</div>
-                      <div className="pl-4">skills: [&apos;Next.js&apos;, &apos;React&apos;, &apos;TypeScript&apos;],</div>
-                      <div className="pl-4">hardWorker: <span className="text-blue-400">true</span>,</div>
-                      <div className="text-secondary-foreground">{'}'};</div>
-                  </div>
 
-                  <div className="mt-8 p-4 rounded-xl bg-accent/50 border border-white/5">
-                     <div className="flex items-center gap-3">
-                        <div className="h-10 w-10 rounded-lg bg-primary/20 flex items-center justify-center text-primary">
-                            <Code2Icon size={20}/>
-                        </div>
-                        <div>
-                            <div className="text-sm font-semibold">Clean Code</div>
-                            <div className="text-xs text-muted-foreground">Always optimized</div>
-                        </div>
-                     </div>
+              <div className="absolute inset-0 bg-card/50 backdrop-blur-3xl rounded-[2.5rem] border border-white/10 shadow-2xl p-8 flex flex-col justify-between overflow-hidden">
+                <div className="absolute top-0 right-0 p-10 opacity-20">
+                  <div className="w-32 h-32 rounded-full bg-primary blur-3xl" />
+                </div>
+
+                {/* Code snippet mock */}
+                <div className="space-y-4 font-mono text-sm opacity-80">
+                  <div className="flex gap-2 mb-6">
+                    <div className="w-3 h-3 rounded-full bg-red-500" />
+                    <div className="w-3 h-3 rounded-full bg-yellow-500" />
+                    <div className="w-3 h-3 rounded-full bg-green-500" />
                   </div>
+                  <div className="text-secondary-foreground">
+                    const <span className="text-primary">Developer</span> = {"{"}
+                  </div>
+                  <div className="pl-4">
+                    name: <span className="text-green-400">&apos;Inggis Trisiawan&apos;</span>,
+                  </div>
+                  <div className="pl-4">
+                    role: <span className="text-green-400">&apos;Software Engineer&apos;</span>,
+                  </div>
+                  <div className="pl-4">
+                    skills: [&apos;Next.js&apos;, &apos;React&apos;, &apos;TypeScript&apos;],
+                  </div>
+                  <div className="pl-4">
+                    hardWorker: <span className="text-blue-400">true</span>,
+                  </div>
+                  <div className="text-secondary-foreground">{"}"};</div>
+                </div>
+
+                <div className="mt-8 p-4 rounded-xl bg-accent/50 border border-white/5">
+                  <div className="flex items-center gap-3">
+                    <div className="h-10 w-10 rounded-lg bg-primary/20 flex items-center justify-center text-primary">
+                      <Code2Icon size={20} />
+                    </div>
+                    <div>
+                      <div className="text-sm font-semibold">Clean Code</div>
+                      <div className="text-xs text-muted-foreground">Always optimized</div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </motion.div>
         </div>
       </div>
-      
+
       {/* Scroll indicator */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, y: [0, 10, 0] }}
         transition={{ delay: 1, duration: 2, repeat: Infinity }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 text-muted-foreground"
       >
         <div className="w-6 h-10 rounded-full border-2 border-muted-foreground/30 flex justify-center p-1">
-            <div className="w-1 h-3 rounded-full bg-muted-foreground/50"/>
+          <div className="w-1 h-3 rounded-full bg-muted-foreground/50" />
         </div>
       </motion.div>
     </section>

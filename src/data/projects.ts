@@ -30,7 +30,7 @@ export const projects: Project[] = [
       "Shipping Cost Calculation: Distance-based costs using external APIs",
       "Reporting & Analytics: Sales and stock history reports by warehouse",
     ],
-    demoUrl: "https://warehub.vercel.app",
+    demoUrl: "https://warehub.iktrisiawan.com",
     backendRepo: "https://github.com/inggiskurnia/dti-fp-backend",
     frontendRepo: "https://github.com/inggiskurnia/dti-fp-frontend",
     screenshots: [
