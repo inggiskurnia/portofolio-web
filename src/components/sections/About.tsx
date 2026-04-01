@@ -26,7 +26,7 @@ const About: FC = () => {
           <div className="h-1 w-20 bg-primary mx-auto rounded-full" />
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-8 xl:gap-10 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-8 xl:gap-10 items-center">
           {/* Left Column: Image/Visual */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -55,7 +55,7 @@ const About: FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="space-y-6"
+            className="col-span-2 space-y-6"
           >
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
               <p>
@@ -72,7 +72,7 @@ const About: FC = () => {
             </div>
 
             <div className="pt-8 space-y-4">
-              <div className="flex items-start gap-4 p-4 rounded-xl bg-card border border-border/50 hover:border-primary/50 transition-colors">
+              <div className="inline-flex max-w-full items-start gap-4 self-start rounded-xl border border-border/50 bg-card p-4 transition-colors hover:border-primary/50">
                 <div className="p-3 bg-primary/10 text-primary rounded-lg">
                   <GraduationCap size={24} />
                 </div>
@@ -82,7 +82,7 @@ const About: FC = () => {
                   </h4>
                   <p className="text-sm text-muted-foreground">Software Engineering</p>
                   <p className="text-sm text-muted-foreground mt-1">
-                    Honing software expertise through intensive bootcamp training.
+                    Honing software expertise through intensive bootcamp training
                   </p>
                 </div>
               </div>
