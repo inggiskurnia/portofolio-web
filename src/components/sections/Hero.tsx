@@ -42,8 +42,8 @@ const Hero: FC = () => {
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-lg leading-relaxed">
-              I&apos;m Inggis Trisiawan, a Software Engineer passionate about crafting scalable
-              applications and intuitive user interfaces with modern technologies.
+              I&apos;m Inggis, a Software Engineer passionate about crafting scalable applications
+              and intuitive user interfaces with modern technologies.
             </p>
 
             <div className="flex flex-wrap gap-4 mb-12">

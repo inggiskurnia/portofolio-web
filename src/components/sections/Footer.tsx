@@ -24,9 +24,7 @@ const Footer: FC = () => {
               Made with <Heart size={14} className="text-red-500 fill-red-500 animate-pulse" /> in
               Indonesia
             </p>
-            <p className="text-muted-foreground text-sm mt-1">
-              © {new Date().getFullYear()} Inggis Trisiawan.
-            </p>
+            <p className="text-muted-foreground text-sm mt-1">© {new Date().getFullYear()}</p>
           </div>
 
           <div className="flex items-center gap-6">
