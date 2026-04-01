@@ -137,7 +137,7 @@ const Hero: FC = () => {
                     role: <span className="text-green-400">&apos;Software Engineer&apos;</span>,
                   </div>
                   <div className="pl-4">
-                    skills: [&apos;Next.js&apos;, &apos;React&apos;, &apos;TypeScript&apos;],
+                    skills: [&apos;Nest.js&apos;, &apos;Spring Boot&apos;, &apos;React.js&apos;],
                   </div>
                   <div className="pl-4">
                     hardWorker: <span className="text-blue-400">true</span>,

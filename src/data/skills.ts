@@ -8,7 +8,6 @@ import {
   SiGit,
   SiDocker,
   SiRedis,
-  SiGraphql,
   SiNeo4J,
   SiNestjs,
   SiNginx,
@@ -21,7 +20,6 @@ import {
 } from "react-icons/si";
 import { BiLogoJava } from "react-icons/bi";
 import { TechStack } from "@/types/techStack";
-import { FaGear } from "react-icons/fa6";
 import { TbBrandAzure } from "react-icons/tb";
 
 interface Skill {
@@ -49,8 +47,6 @@ export const skills: Skill[] = [
       { name: "Nest.js", icon: SiNestjs },
       { name: "Kafka", icon: SiApachekafka },
       { name: "Grafana", icon: SiGrafana },
-      { name: "REST API", icon: FaGear },
-      { name: "GraphQL", icon: SiGraphql },
     ],
   },
   {
