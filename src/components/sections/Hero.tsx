@@ -60,6 +60,8 @@ const Hero: FC = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 href="/files/resume.pdf"
+                target="_blank"
+                rel="noreferrer"
                 className="px-8 py-4 rounded-full bg-card border border-border text-foreground font-semibold flex items-center gap-2 hover:bg-accent hover:text-accent-foreground transition-all"
               >
                 Download CV
