@@ -22,6 +22,10 @@ const ProjectPage: FC = () => {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);
+  const [fullscreenApi, setFullscreenApi] = useState<CarouselApi>();
+  const [fullscreenCurrent, setFullscreenCurrent] = useState(0);
+  const [isFullscreenOpen, setIsFullscreenOpen] = useState(false);
+  const [fullscreenStartIndex, setFullscreenStartIndex] = useState(0);
 
   useEffect(() => {
     if (!api) {
@@ -35,6 +39,45 @@ const ProjectPage: FC = () => {
       setCurrent(api.selectedScrollSnap() + 1);
     });
   }, [api]);
+
+  useEffect(() => {
+    if (!fullscreenApi) {
+      return;
+    }
+
+    setFullscreenCurrent(fullscreenApi.selectedScrollSnap() + 1);
+
+    fullscreenApi.on("select", () => {
+      setFullscreenCurrent(fullscreenApi.selectedScrollSnap() + 1);
+    });
+  }, [fullscreenApi]);
+
+  useEffect(() => {
+    if (!isFullscreenOpen) {
+      return;
+    }
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setIsFullscreenOpen(false);
+      }
+    };
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isFullscreenOpen]);
+
+  const openFullscreenCarousel = (index: number) => {
+    setFullscreenStartIndex(index);
+    setFullscreenCurrent(index + 1);
+    setIsFullscreenOpen(true);
+  };
 
   if (!project) {
     return (
@@ -77,7 +120,12 @@ const ProjectPage: FC = () => {
                 <CarouselContent>
                   {project.screenshots?.map((screenshot, index) => (
                     <CarouselItem key={index}>
-                      <div className="relative aspect-[16/9] rounded-xl overflow-hidden bg-white shadow-inner">
+                      <button
+                        type="button"
+                        onClick={() => openFullscreenCarousel(index)}
+                        className="relative block aspect-[16/9] w-full overflow-hidden rounded-xl bg-white shadow-inner transition-transform hover:scale-[1.01] focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                        aria-label={`Open screenshot ${index + 1} in fullscreen`}
+                      >
                         <Image
                           src={screenshot}
                           alt={`${project.title} screenshot ${index + 1}`}
@@ -85,7 +133,7 @@ const ProjectPage: FC = () => {
                           className="object-contain"
                           priority={index === 0}
                         />
-                      </div>
+                      </button>
                     </CarouselItem>
                   ))}
                 </CarouselContent>
@@ -193,6 +241,59 @@ const ProjectPage: FC = () => {
           </div>
         </div>
       </div>
+
+      {isFullscreenOpen && project.screenshots && project.screenshots.length > 0 && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 sm:p-8"
+          role="dialog"
+          aria-modal="true"
+          aria-label={`${project.title} screenshot gallery`}
+          onClick={() => setIsFullscreenOpen(false)}
+        >
+          <div
+            className="relative w-full max-w-6xl"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <button
+              type="button"
+              onClick={() => setIsFullscreenOpen(false)}
+              className="absolute right-0 top-0 z-10 rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-white backdrop-blur transition hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white/70"
+            >
+              Close
+            </button>
+
+            <Carousel
+              setApi={setFullscreenApi}
+              opts={{ startIndex: fullscreenStartIndex }}
+              className="w-full"
+            >
+              <CarouselContent>
+                {project.screenshots.map((screenshot, index) => (
+                  <CarouselItem key={index}>
+                    <div className="relative aspect-[16/10] overflow-hidden rounded-2xl bg-black">
+                      <Image
+                        src={screenshot}
+                        alt={`${project.title} screenshot ${index + 1}`}
+                        fill
+                        className="object-contain"
+                        sizes="100vw"
+                        priority={index === fullscreenStartIndex}
+                      />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+
+              <div className="mt-4 text-center text-sm text-white/80">
+                {fullscreenCurrent} / {project.screenshots.length}
+              </div>
+
+              <CarouselPrevious className="left-3 bg-white/15 text-white hover:bg-white/25 disabled:bg-white/5" />
+              <CarouselNext className="right-3 bg-white/15 text-white hover:bg-white/25 disabled:bg-white/5" />
+            </Carousel>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
