@@ -155,6 +155,11 @@ const ProjectPage: FC = () => {
                             </a>
                             )}
                         </div>
+                        {!project.demoUrl && !project.frontendRepo && !project.backendRepo && project.confidential && (
+                            <div className="flex items-center justify-center p-3 rounded-lg border border-dashed border-border bg-secondary/30 text-muted-foreground font-medium">
+                                Confidential
+                            </div>
+                        )}
                     </div>
                 </div>
 

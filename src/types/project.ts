@@ -7,10 +7,11 @@ export interface Project {
   description: string;
   thumbnail: string;
   techStack: TechStack[];
-  demoUrl: string;
+  demoUrl?: string;
   backendRepo?: string;
-  frontendRepo: string;
+  frontendRepo?: string;
   screenshots?: string[];
   detailedDescription?: string;
   features?: string[];
+  confidential?: boolean;
 }

@@ -14,6 +14,7 @@ const ProjectCard: FC<Project> = ({
   demoUrl,
   frontendRepo,
   backendRepo,
+  confidential,
 }) => {
   return (
     <div
@@ -93,6 +94,12 @@ const ProjectCard: FC<Project> = ({
               <FaGithub size={16} className="mr-1" />
               Backend
             </a>
+          )}
+
+          {!demoUrl && !frontendRepo && !backendRepo && confidential && (
+            <span className="flex items-center text-gray-500 font-medium">
+              Confidential
+            </span>
           )}
         </div>
       </div>
