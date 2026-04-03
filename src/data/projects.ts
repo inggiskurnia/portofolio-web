@@ -22,8 +22,6 @@ export const projects: Project[] = [
     slug: "operations-form-input-system",
     description:
       "An internal operations platform for managing operational data input, utility billing, inventory transactions, incident reporting, and rental administration for an industrial estate client. Built with bulk input workflows, Excel export, role-based access control, Microsoft login, and document storage integration.",
-    detailedDescription:
-      "An internal operations platform for managing daily operational data input, utility billing records, inventory transactions, incident reporting, and rental administration for an industrial estate client. The system streamlines cross-department data collection through structured forms, bulk input workflows, Excel exports, role-based access control, and integrated document handling.",
     thumbnail: "/images/kitb-form-input/login.jpg",
     techStack: [
       { name: "React", icon: SiReact },
@@ -74,8 +72,6 @@ export const projects: Project[] = [
     slug: "facility-vehicle-booking-management-system",
     description:
       "An internal booking platform for managing meeting room and vehicle reservations for an industrial estate client. Built with self-service booking, approval workflows, conflict resolution, driver assignment, reporting, and operational notifications to streamline shared facility and transportation usage.",
-    detailedDescription:
-      "An internal booking platform for managing meeting room and vehicle reservations in one system. The application supports public availability views, self-service booking, approval workflows, conflict detection and resolution, driver assignment, and operational notifications to help teams coordinate shared facilities and transportation more efficiently.",
     thumbnail: "/images/kitb-booking-mgmt/welcome.jpg",
     techStack: [
       { name: "React", icon: SiReact },
@@ -120,8 +116,6 @@ export const projects: Project[] = [
     slug: "risk-register-system",
     description:
       "An internal risk management platform for recording, assessing, and monitoring risks across divisions for an industrial estate client. Built with inherent and residual risk scoring, approval workflows, control documentation, mitigation planning, top-risk selection, and attachment management.",
-    detailedDescription:
-      "An internal enterprise risk management platform for recording, assessing, and monitoring organizational risks across divisions. The system supports inherent and residual risk scoring, approval workflows, control documentation, mitigation planning, top-risk selection, attachment management, and division-based access control to help teams manage risk in a structured and auditable way.",
     thumbnail: "/images/kitb-risk-register/dashboard_1.jpg",
     techStack: [
       { name: "React", icon: SiReact },
