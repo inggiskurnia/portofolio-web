@@ -8,8 +8,12 @@ import {
   SiTypescript,
   SiVite,
   SiAntdesign,
+  SiNestjs,
+  SiNeo4J,
+  SiRedis,
 } from "react-icons/si";
-import { BiLogoJava } from "react-icons/bi";
+import { BiLogoJava, BiCube, BiCloudUpload } from "react-icons/bi";
+import { FaMicrosoft } from "react-icons/fa6";
 
 export const projects: Project[] = [
   {
@@ -25,13 +29,13 @@ export const projects: Project[] = [
       { name: "React", icon: SiReact },
       { name: "TypeScript", icon: SiTypescript },
       { name: "Vite", icon: SiVite },
-      { name: "Refine" },
+      { name: "Refine", icon: BiCube },
       { name: "Ant Design", icon: SiAntdesign },
-      { name: "NestJS" },
-      { name: "Neo4j" },
-      { name: "Redis" },
-      { name: "MinIO" },
-      { name: "Microsoft Entra ID" },
+      { name: "NestJS", icon: SiNestjs },
+      { name: "Neo4j", icon: SiNeo4J },
+      { name: "Redis", icon: SiRedis },
+      { name: "MinIO", icon: BiCloudUpload },
+      { name: "Microsoft Entra ID", icon: FaMicrosoft },
     ],
     features: [
       "Centralized operational data entry across multiple domains, including TPST, IPA, IPAL, QC, distribution, production, and SCADA-related records",
@@ -78,11 +82,11 @@ export const projects: Project[] = [
       { name: "TypeScript", icon: SiTypescript },
       { name: "Vite", icon: SiVite },
       { name: "Tailwind CSS", icon: SiTailwindcss },
-      { name: "NestJS" },
-      { name: "Neo4j" },
-      { name: "Redis" },
-      { name: "MinIO" },
-      { name: "Microsoft Entra ID" },
+      { name: "NestJS", icon: SiNestjs },
+      { name: "Neo4j", icon: SiNeo4J },
+      { name: "Redis", icon: SiRedis },
+      { name: "MinIO", icon: BiCloudUpload },
+      { name: "Microsoft Entra ID", icon: FaMicrosoft },
     ],
     features: [
       "Unified room and vehicle booking workflows in a single internal platform",
@@ -123,13 +127,13 @@ export const projects: Project[] = [
       { name: "React", icon: SiReact },
       { name: "TypeScript", icon: SiTypescript },
       { name: "Vite", icon: SiVite },
-      { name: "Refine" },
+      { name: "Refine", icon: BiCube },
       { name: "Ant Design", icon: SiAntdesign },
-      { name: "NestJS" },
-      { name: "Neo4j" },
-      { name: "Redis" },
-      { name: "MinIO" },
-      { name: "Microsoft Entra ID" },
+      { name: "NestJS", icon: SiNestjs },
+      { name: "Neo4j", icon: SiNeo4J },
+      { name: "Redis", icon: SiRedis },
+      { name: "MinIO", icon: BiCloudUpload },
+      { name: "Microsoft Entra ID", icon: FaMicrosoft },
     ],
     features: [
       "Centralized risk register with division and group-based ownership",
